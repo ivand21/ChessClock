@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChessClock.GameSettingsPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" 
+                     Padding="20, 20, 20, 20"
+                     VerticalOptions="Center">
+
+            <Label Text="Game settings" 
+                    Style="{StaticResource infoLabelStyle}"
+                    FontSize="40"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="White time"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+
+                <Entry x:Name="WhiteTotal" 
+                   Text="5"
+                   WidthRequest="50"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric">
+                </Entry>
+
+                <Label Text="mins +"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+
+                <Entry x:Name="WhitePerMove" 
+                   Text="0"
+                   WidthRequest="50"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric">
+                </Entry>
+
+                <Label Text="sec per move"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Black time"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+
+                <Entry x:Name="BlackTotal" 
+                   Text="5"
+                   WidthRequest="50"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric">
+                </Entry>
+
+                <Label Text="mins +"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+
+                <Entry x:Name="BlackPerMove" 
+                   Text="0"
+                   WidthRequest="50"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric">
+                </Entry>
+
+                <Label Text="sec per move"
+                    Style="{StaticResource txtSettingsLabelStyle}"   >
+                </Label>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical">
+                <Button Text="Black same as white"
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnEqualizeButtonClicked"/>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Bonus"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+
+                <Entry x:Name="ControlBonusTime"
+                   Style="{StaticResource txtSettingsLabelStyle}"
+                   Text="0"
+                   WidthRequest="50"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric">
+                </Entry>
+
+                <Label Text="mins after"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+
+                <Entry x:Name="TimeControlMoves"
+                   Text="0"
+                   WidthRequest="50"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric">
+                </Entry>
+
+                <Label 
+                    Text="moves"
+                    Style="{StaticResource txtSettingsLabelStyle}">
+                </Label>
+            </StackLayout>
+
+            <Button Text="Start"
+                    Style="{StaticResource buttonStyle}"
+                    Clicked="OnStartButtonClicked"/>
+
+            <Button Text="Back"
+                Style="{StaticResource buttonStyle}"
+                Clicked="OnBackButtonClicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

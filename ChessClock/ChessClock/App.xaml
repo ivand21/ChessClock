@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChessClock.App">
+	<Application.Resources>
+        <ResourceDictionary>
+            <Image xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Key="imgBackground">
+                <Image.Source>
+                    <OnPlatform x:TypeArguments="ImageSource">
+                        <OnPlatform.iOS>
+                            <FileImageSource File="Resources/icon.png"/>
+                        </OnPlatform.iOS>
+                        <OnPlatform.Android>
+                            <FileImageSource File="Resources/drawable/icon.png"/>
+                        </OnPlatform.Android>
+                    </OnPlatform>
+                </Image.Source>
+            </Image>
+
+            <Style TargetType="ContentPage" ApplyToDerivedTypes="True">
+                <Setter Property="BackgroundColor" Value="#AE5A41" />
+                <Setter Property="BackgroundImage" Value="Resources/drawable/background.png"/>
+                <Setter Property="NavigationPage.HasNavigationBar" Value="False"/>
+            </Style>
+
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#FAE9AD" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="#1C4D8A" />
+                <Setter Property="FontFamily" Value="Arial" />
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style x:Key="infoLabelStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
+            <Style x:Key="timeLabelStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="72" />
+            </Style>
+
+            <Style x:Key="txtSettingsLabelStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+            </Style>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

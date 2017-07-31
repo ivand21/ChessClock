@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChessClock.CreditsPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="Created by Jan Dąbrowski" 
+                Style="{StaticResource infoLabelStyle}"
+                FontSize="24"/>
+
+            <Button Text="Back" Style="{StaticResource buttonStyle}" Clicked="OnBackButtonClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

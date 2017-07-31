@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChessClock.GamePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="outerStack">
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40*" />
+                    <RowDefinition Height="20*" />
+                    <RowDefinition Height="40*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+            <StackLayout 
+                Grid.Column="0" 
+                Grid.Row="0" 
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand"
+                x:Name="stackWhiteTime">
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnWhiteTapped"/>
+                </StackLayout.GestureRecognizers>
+
+                <Label x:Name="lblWhiteTime"
+                    Text="0:00"
+                    Style="{StaticResource timeLabelStyle}"/>
+            </StackLayout>
+                
+            <StackLayout 
+                Grid.Row="1" 
+                Grid.Column="0"
+                BackgroundColor="Gray"
+                Orientation="Horizontal"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                x:Name="stackMenu">
+
+
+                    <Button 
+                        Text="Start/stop"
+                        Style="{StaticResource buttonStyle}"
+                        VerticalOptions="FillAndExpand"
+                        Clicked="OnStartStopButtonClicked"/>
+
+
+                    <Button 
+                        Text="Main menu"
+                        Style="{StaticResource buttonStyle}"
+                        VerticalOptions="FillAndExpand"
+                        Clicked="OnGameMenuButtonClicked">
+                    </Button>
+                </StackLayout>
+
+            <StackLayout 
+                Grid.Column="0" 
+                Grid.Row="2" 
+                VerticalOptions="FillAndExpand" 
+                HorizontalOptions="FillAndExpand"
+                x:Name="stackBlackTime">
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBlackTapped"/>
+                </StackLayout.GestureRecognizers>
+
+                <Label x:Name="lblBlackTime"
+                    Text="0:00"
+                    Style="{StaticResource timeLabelStyle}"/>
+            </StackLayout>
+        </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

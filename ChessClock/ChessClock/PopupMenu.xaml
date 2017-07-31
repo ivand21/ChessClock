@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             x:Class="ChessClock.PopupMenu">
+
+    <StackLayout VerticalOptions="Center" 
+        HorizontalOptions="FillAndExpand" 
+        BackgroundColor="LightGray"
+        Padding="20, 10, 20, 20" 
+        Opacity="0.9">
+        <Button
+                        Text="Resume game" 
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnResumeButtonClicked"/>
+        <Button
+                        Text="Turn around" 
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnSwapSidesButtonClicked"/>
+        <Button
+                        Text="Reset game" 
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnResetGameButtonClicked"/>
+        <Button
+                        Text="Main menu" 
+                        Style="{StaticResource buttonStyle}"
+                        Clicked="OnMainMenuButtonClicked"/>
+    </StackLayout>
+</pages:PopupPage>
